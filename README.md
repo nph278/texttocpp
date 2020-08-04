@@ -21,3 +21,6 @@ or
 ```
   texttocpp --minimal [infile]
 ```
+
+Please post suggestions!
+========================
