@@ -1,6 +1,11 @@
 # texttocpp
 Converts text files into C++ programs that print them.
 
+Installation
+------------
+
+Read INSTALL.md for installation instructions.
+
 Usage
 -----
 
