@@ -13,6 +13,7 @@ int main(int argc, const char * argv[]) {
         std::cout << "Usage:\n";
         std::cout << "\ttexttocpp [infile]\n\n";
         std::cout << "-m --minimal\tMinimal output\n\n";
+        std::cout << "-s --shell --system\tUses system instead of printing\n\n";
         return 1;
     } else if (argc == 3 && (strncmp(argv[1],"-m",std::max(int(sizeof(argv[1])),2)) == 0 || strncmp(argv[1],"--minimal",std::max(int(sizeof(argv[2])),9)) == 0)) {
         std::fstream newfile;
@@ -82,6 +83,7 @@ int main(int argc, const char * argv[]) {
         std::cout << "Usage:\n";
         std::cout << "\ttexttocpp [infile]\n\n";
         std::cout << "-m --minimal\tMinimal output\n\n";
+        std::cout << "-s --shell --system\tUses system instead of printing\n\n";
         return 1;
     }
 }
