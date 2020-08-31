@@ -27,5 +27,10 @@ or
   texttocpp --minimal [infile]
 ```
 
+`-s` uses system instead of print.
+Use `-sm` for both system and minimal.
+
+
+
 Please post suggestions!
 ========================
