@@ -103,13 +103,15 @@ int main(int argc, const char * argv[]) {
                     tp.replace( m, a.size(), b );
                     m += b.size();
                 }
-                std::string lastchar;
-                lastchar =  tp[tp.length()-1];
-                std::string semicolon = ";";
-                if (strncmp(lastchar,semicolon,1)==0) {
-                    std::cout << tp;
-                } else {
-                    std::cout << tp << ";";
+                tp = tp + ";";
+                std::cout << tp;
+                std::string::size_type n = 0;
+                std::string c = ";;";
+                std::string d = ";";
+                while ( ( n = tp.find( c, n ) ) != std::string::npos )
+                {
+                    tp.replace( n, c.size(), d );
+                    n += d.size();
                 }
             }
             std::cout << "\");return 0;}\n";
