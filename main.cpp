@@ -70,7 +70,7 @@ int main(int argc, const char * argv[]) {
                     tp.replace( m, a.size(), b );
                     m += b.size();
                 }
-                std::cout << "\tsystem(\""<<tp<<");\n";
+                std::cout << "\tsystem(\""<<tp<<"\");\n";
             }
             std::cout << "\treturn 0;\n}\n";
             newfile.close();
