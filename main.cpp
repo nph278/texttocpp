@@ -108,9 +108,9 @@ int main(int argc, const char * argv[]) {
                 std::string::size_type r = 0;
                 std::string c = ";;";
                 std::string d = ";";
-                while ( ( n = tp.find( c, r ) ) != std::string::npos )
+                while ( ( r = tp.find( c, r ) ) != std::string::npos )
                 {
-                    tp.replace( n, c.size(), d );
+                    tp.replace( r, c.size(), d );
                     r += d.size();
                 }
             }
