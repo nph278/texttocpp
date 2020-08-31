@@ -47,7 +47,7 @@ int main(int argc, const char * argv[]) {
             std::cout << "Error: " << argv[2] << ": file not found." << "\n";
             return 1;
         }
-    } else if (argc == 3 && (strncmp(argv[1],"-s",std::max(int(sizeof(argv[1])),2)) == 0 || strncmp(argv[1],"--system",std::max(int(sizeof(argv[2])),8)) == 0) || strncmp(argv[1],"--shell",std::max(int(sizeof(argv[2])),7)) == 0)) {
+    } else if (argc == 3 && (strncmp(argv[1],"-s",std::max(int(sizeof(argv[1])),2)) == 0 || strncmp(argv[1],"--system",std::max(int(sizeof(argv[2])),8)) == 0 || strncmp(argv[1],"--shell",std::max(int(sizeof(argv[2])),7)) == 0))) {
         std::fstream newfile;
         newfile.open(argv[1],std::ios::in);
         if (newfile.is_open()){
