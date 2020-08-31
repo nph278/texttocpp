@@ -28,7 +28,7 @@ or
 ```
 
 `-s` uses system instead of print.
-Use `-sm` for both.
+Use `-sm` for both system and minimal.
 
 
 
