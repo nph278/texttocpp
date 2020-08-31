@@ -49,7 +49,7 @@ int main(int argc, const char * argv[]) {
         }
     } else if (argc == 3 && (strncmp(argv[1],"-s",std::max(int(sizeof(argv[1])),2)) == 0 || strncmp(argv[1],"--system",std::max(int(sizeof(argv[2])),8)) == 0 || strncmp(argv[1],"--shell",std::max(int(sizeof(argv[2])),7)) == 0)) {
         std::fstream newfile;
-        newfile.open(argv[1],std::ios::in);
+        newfile.open(argv[2],std::ios::in);
         if (newfile.is_open()){
             std::cout << "#include <iostream>\n\nint main(){\n";
             std::string tp;
