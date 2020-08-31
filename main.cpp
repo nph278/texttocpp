@@ -103,7 +103,8 @@ int main(int argc, const char * argv[]) {
                     tp.replace( m, a.size(), b );
                     m += b.size();
                 }
-                if (strncmp(std::string(tp.back()).c_str(),";",1)) {
+                std::string semicolon = ";";
+                if (semicolon.compare(tp.back())==0) {
                     std::cout << tp;
                 } else {
                     std::cout << tp << ";";
