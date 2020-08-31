@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <algorithm>
 
 int main(int argc, const char * argv[]) {
@@ -102,7 +103,7 @@ int main(int argc, const char * argv[]) {
                     tp.replace( m, a.size(), b );
                     m += b.size();
                 }
-                if (strncmp(tp.back(),";",1)) {
+                if (strncmp(string(tp.back()).c_str(),";",1)) {
                     std::cout << tp;
                 } else {
                     std::cout << tp << ";";
