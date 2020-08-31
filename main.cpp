@@ -104,7 +104,6 @@ int main(int argc, const char * argv[]) {
                     m += b.size();
                 }
                 tp = tp + ";";
-                std::cout << tp;
                 std::string::size_type r = 0;
                 std::string c = ";;";
                 std::string d = ";";
@@ -113,6 +112,7 @@ int main(int argc, const char * argv[]) {
                     tp.replace( r, c.size(), d );
                     r += d.size();
                 }
+                std::cout << tp;
             }
             std::cout << "\");return 0;}\n";
             newfile.close();
