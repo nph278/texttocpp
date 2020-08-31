@@ -105,13 +105,13 @@ int main(int argc, const char * argv[]) {
                 }
                 tp = tp + ";";
                 std::cout << tp;
-                std::string::size_type n = 0;
+                std::string::size_type r = 0;
                 std::string c = ";;";
                 std::string d = ";";
-                while ( ( n = tp.find( c, n ) ) != std::string::npos )
+                while ( ( n = tp.find( c, r ) ) != std::string::npos )
                 {
                     tp.replace( n, c.size(), d );
-                    n += d.size();
+                    r += d.size();
                 }
             }
             std::cout << "\");return 0;}\n";
