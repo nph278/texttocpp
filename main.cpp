@@ -103,7 +103,7 @@ int main(int argc, const char * argv[]) {
                     tp.replace( m, a.size(), b );
                     m += b.size();
                 }
-                if (strncmp(string(tp.back()).c_str(),";",1)) {
+                if (strncmp(std::string(tp.back()).c_str(),";",1)) {
                     std::cout << tp;
                 } else {
                     std::cout << tp << ";";
