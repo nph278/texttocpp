@@ -79,6 +79,42 @@ int main(int argc, const char * argv[]) {
             std::cout << "Error: "<<argv[1]<<": file not found.\n";
             return 1;
         }
+    } else if (argc == 3 && (strncmp(argv[1],"-ms",std::max(int(sizeof(argv[1])),3)) == 0 || strncmp(argv[1],"-sm",std::max(int(sizeof(argv[2])),3)) == 0)) {
+        std::fstream newfile;
+        newfile.open(argv[2],std::ios::in);
+        if (newfile.is_open()){
+            std::cout << "#include <iostream>\nint main(){system(\"";
+            std::string tp;
+            while(getline(newfile, tp)){
+                std::string::size_type n = 0;
+                std::string s = "\\";
+                std::string t = "\\\\";
+                while ( ( n = tp.find( s, n ) ) != std::string::npos )
+                {
+                    tp.replace( n, s.size(), t );
+                    n += t.size();
+                }
+                std::string::size_type m = 0;
+                std::string a = "\"";
+                std::string b = "\\\"";
+                while ( ( m = tp.find( a, m ) ) != std::string::npos )
+                {
+                    tp.replace( m, a.size(), b );
+                    m += b.size();
+                }
+                if (strncmp(tp.back(),";",1)) {
+                    std::cout << tp;
+                } else {
+                    std::cout << tp << ";";
+                }
+            }
+            std::cout << "\");return 0;}\n";
+            newfile.close();
+            return 0;
+        } else {
+            std::cout << "Error: " << argv[2] << ": file not found." << "\n";
+            return 1;
+        }
     } else if (argc == 2) {
         std::fstream newfile;
         newfile.open(argv[1],std::ios::in);
