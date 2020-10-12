@@ -26,17 +26,17 @@ int main(int argc, const char * argv[]) {
                 std::string::size_type n = 0;
                 std::string s = "\\";
                 std::string t = "\\\\";
-                while ( ( n = tp.find( s, n ) ) != std::string::npos )
+                while ((n = tp.find(s, n)) != std::string::npos)
                 {
-                    tp.replace( n, s.size(), t );
+                    tp.replace(n, s.size(), t);
                     n += t.size();
                 }
                 std::string::size_type m = 0;
                 std::string a = "\"";
                 std::string b = "\\\"";
-                while ( ( m = tp.find( a, m ) ) != std::string::npos )
+                while ((m = tp.find(a, m)) != std::string::npos)
                 {
-                    tp.replace( m, a.size(), b );
+                    tp.replace(m, a.size(), b);
                     m += b.size();
                 }
                 std::cout << tp<<"\\n";
@@ -58,17 +58,17 @@ int main(int argc, const char * argv[]) {
                 std::string::size_type n = 0;
                 std::string s = "\\";
                 std::string t = "\\\\";
-                while ( ( n = tp.find( s, n ) ) != std::string::npos )
+                while ((n = tp.find(s, n)) != std::string::npos)
                 {
-                    tp.replace( n, s.size(), t );
+                    tp.replace(n, s.size(), t);
                     n += t.size();
                 }
                 std::string::size_type m = 0;
                 std::string a = "\"";
                 std::string b = "\\\"";
-                while ( ( m = tp.find( a, m ) ) != std::string::npos )
+                while ((m = tp.find(a, m)) != std::string::npos)
                 {
-                    tp.replace( m, a.size(), b );
+                    tp.replace(m, a.size(), b);
                     m += b.size();
                 }
                 std::cout << "\tsystem(\""<<tp<<"\");\n";
@@ -90,26 +90,26 @@ int main(int argc, const char * argv[]) {
                 std::string::size_type n = 0;
                 std::string s = "\\";
                 std::string t = "\\\\";
-                while ( ( n = tp.find( s, n ) ) != std::string::npos )
+                while ((n = tp.find(s, n)) != std::string::npos)
                 {
-                    tp.replace( n, s.size(), t );
+                    tp.replace(n, s.size(), t);
                     n += t.size();
                 }
                 std::string::size_type m = 0;
                 std::string a = "\"";
                 std::string b = "\\\"";
-                while ( ( m = tp.find( a, m ) ) != std::string::npos )
+                while ((m = tp.find(a, m)) != std::string::npos)
                 {
-                    tp.replace( m, a.size(), b );
+                    tp.replace(m, a.size(), b);
                     m += b.size();
                 }
                 tp = tp + ";";
                 std::string::size_type r = 0;
                 std::string c = ";;";
                 std::string d = ";";
-                while ( ( r = tp.find( c, r ) ) != std::string::npos )
+                while ((r = tp.find(c, r)) != std::string::npos)
                 {
-                    tp.replace( r, c.size(), d );
+                    tp.replace(r, c.size(), d);
                     r += d.size();
                 }
                 std::cout << tp;
@@ -131,17 +131,17 @@ int main(int argc, const char * argv[]) {
                 std::string::size_type n = 0;
                 std::string s = "\\";
                 std::string t = "\\\\";
-                while ( ( n = tp.find( s, n ) ) != std::string::npos )
+                while ((n = tp.find(s, n)) != std::string::npos)
                 {
-                    tp.replace( n, s.size(), t );
+                    tp.replace(n, s.size(), t);
                     n += t.size();
                 }
                 std::string::size_type m = 0;
                 std::string a = "\"";
                 std::string b = "\\\"";
-                while ( ( m = tp.find( a, m ) ) != std::string::npos )
+                while ((m = tp.find(a, m)) != std::string::npos)
                 {
-                    tp.replace( m, a.size(), b );
+                    tp.replace(m, a.size(), b);
                     m += b.size();
                 }
                 std::cout << "\tstd::cout << \""<<tp<<"\" << \"\\n\";\n";
